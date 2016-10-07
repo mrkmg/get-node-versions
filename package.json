@@ -1,0 +1,50 @@
+{
+  "name": "get-node-versions",
+  "version": "1.0.0",
+  "description": "Find node versions with a powerful syntax",
+  "license": "MIT",
+  "repository": "",
+  "author": "",
+  "keywords": [
+    ""
+  ],
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "bin": {
+    "get-node-versions": "./bin/get-node-versions"
+  },
+  "main": "lib/get-node-version.js",
+  "typings": "lib/get-node-version.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\" \"test/**/*.ts\" ",
+    "build": "npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty",
+    "test": "npm run build && mocha --compilers ts:ts-node/register --recursive test/specs/**/*.ts",
+    "watch": "npm run build -- --watch",
+    "watch:test": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "@types/bluebird": "^3.0.35",
+    "@types/semver": "^5.3.30",
+    "bluebird": "^3.4.6",
+    "flatten": "^1.0.2",
+    "semver": "^5.3.0",
+    "semver-loose": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "3.4.30",
+    "@types/mocha": "2.2.29",
+    "@types/node": "6.0.31",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.1",
+    "rimraf": "^2.5.4",
+    "ts-node": "^1.2.2",
+    "tslint": "3.15.1",
+    "typescript": "2.0.3"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
