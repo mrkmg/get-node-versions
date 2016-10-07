@@ -1,0 +1,16 @@
+sudo: false
+node_js:
+  - 6
+  - 5
+  - 4
+language: node_js
+os:
+  - linux
+  - osx
+notifications:
+  email:
+    recipients:
+      - kevin@mrkmg.com
+    on_success: [change]
+    on_failure: [always]
+script: npm test

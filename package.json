@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "Find node versions with a powerful syntax",
   "license": "MIT",
-  "repository": "",
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrkmg/get-node-versions.git"
+  },
+  "homepage": "https://github.com/mrkmg/get-node-versions",
+  "bugs": {
+    "url": "https://github.com/mrkmg/get-node-versions/issues"
+  },
+  "author": "Kevin Gravier <kevin@mrkmg.com>",
   "keywords": [
-    ""
+    "node",
+    "versions"
   ],
   "files": [
     "lib",
