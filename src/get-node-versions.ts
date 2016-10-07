@@ -307,7 +307,8 @@ export class GetNodeVersions {
                 let lib = GetNodeVersions.NODEJS_MIRROR.substr(0, 5) === "https" ? require("https") : require("http");
                 let request = lib.get(GetNodeVersions.NODEJS_MIRROR + "/index.json", (response: ClientResponse) => {
                     if (response.statusCode < 200 || response.statusCode > 299) {
-                        return reject("Failed to load nodejs version list from: " + GetNodeVersions.NODEJS_MIRROR);
+                        let errorStr = `Failed to load nodejs version list from: ${GetNodeVersions.NODEJS_MIRROR}`;
+                        return reject(new Error(errorStr));
                     }
 
                     let body: Array<string> = [];

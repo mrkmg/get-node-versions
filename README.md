@@ -33,6 +33,29 @@ As a cli program
     4.6.0
     6.7.0
 
+## API
+
+**GetNodeVersions**
+
+- `parse(versions: string | Array<string>): Promise<Array<string>>`
+    - Parse input and return valid nodejs versions 
+- `NODEJS_MIRROR: string`
+    - Mirror to use to retrieve the nodejs version list. default: https://nodejs.org/dist/
+- `versionListCache: Array<VersionListCacheItem>`
+    - Set this to skip pulling versions from the mirror.
+    
+**VersionListCacheItem**
+    
+- `version: string`
+- `date: string`
+- `files: Array<string>`
+- `npm: string`
+- `v8: string`
+- `uv: string`
+- `zlib: string`
+- `openssl: string`
+- `modules: string`
+- `lts: boolean`
 
 ## Versions Syntax
 
