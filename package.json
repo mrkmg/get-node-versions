@@ -23,8 +23,8 @@
   "bin": {
     "get-node-versions": "./bin/get-node-versions"
   },
-  "main": "lib/get-node-version.js",
-  "typings": "lib/get-node-version.d.ts",
+  "main": "lib/get-node-versions.js",
+  "typings": "lib/get-node-versions.d.ts",
   "scripts": {
     "clean": "rimraf lib",
     "lint": "tslint --force --format verbose \"src/**/*.ts\" \"test/**/*.ts\" ",
